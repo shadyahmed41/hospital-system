@@ -15,7 +15,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
     'http://localhost:5173',
-    "https://your-frontend.vercel.app", // later
+    "https://hospital-system-38t29e60i-shady-ahmeds-projects.vercel.app", // later
   ], // Your Vite dev server
     credentials: true,
   });
