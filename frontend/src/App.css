@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1a365d;
+  --primary-dark: #0d2340;
+  --secondary: #2d3748;
+  --accent: #4299e1;
+  --success: #38a169;
+  --warning: #ed8936;
+  --danger: #e53e3e;
+  --light: #f7fafc;
+  --dark: #2d3748;
+  --gray: #718096;
+  --gray-light: #e2e8f0;
+  --border: #e2e8f0;
+  --accent-light: #bee3f8;
+  --accent-dark: #2c5282;
+  --danger: #e53e3e;
+  --primary-light: #4299e1;
+  --primary-dark: #2d3748;
+  --accent-light: #90cdf4;
+  --accent-dark: #2c5282;
+  --border-light: #e2e8f0;
+  --success: #38a169;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--gray-light);
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge-blood {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
+
+.badge-condition {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.badge-room {
+  background-color: #bee3f8;
+  color: #2c5282;
+}
+
+.badge-status {
+  background-color: #e9d8fd;
+  color: #553c9a;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-active {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.status-inactive {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
+
+.status-pending {
+  background-color: #feebc8;
+  color: #9c4221;
+}
+
+.status-completed {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.status-upcoming {
+  background-color: #bee3f8;
+  color: #2c5282;
+}
+
+.status-in-progress {
+  background-color: #e9d8fd;
+  color: #553c9a;
+}
+
+/* RTL Specific Styles */
+.rtl {
+  text-align: right;
+}
+
+.rtl .header-left {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.rtl .btn {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.rtl .modal-content {
+  text-align: right;
+}
+
+.rtl .form-group label {
+  text-align: right;
+  display: block;
+}
+
+.rtl .nav-item {
+  flex-direction: row-reverse;
+}
+
+/* LTR Specific Styles */
+.ltr {
+  text-align: left;
+}
+
+
+
+body {
+  transition: all 0.3s ease;
+}

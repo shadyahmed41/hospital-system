@@ -1,0 +1,49 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       String @id @default(uuid())
+  name     String @unique
+  password String
+  role     Role
+}
+
+model visit {
+  id                String   @id @default(uuid())
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  patientId         String
+  reason            String?
+  highBloodPressure String
+  lowBloodPressure  String
+  oxygenLevel       String
+  temprature        String
+  heartBeat         String
+  result            String
+  note              String?
+  medicineName      String?
+  medicineDosage    String?
+  patient           Patient  @relation(fields: [patientId], references: [id], onDelete: Cascade)
+}
+
+model Patient {
+  id                String  @id @default(uuid())
+  name              String
+  section           String
+  nationalId        String?
+  MedicalConditions String?
+  BloodType         String?
+  JoiningDate       String?
+  OutDate           String?
+  visits            visit[]
+}
+
+enum Role {
+  ADMIN
+  USER
+}
